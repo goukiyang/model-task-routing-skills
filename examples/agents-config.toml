@@ -1,0 +1,43 @@
+# 示例角色注册片段，不是可直接覆盖现有配置的完整 config.toml。
+# 合并到目标 config.toml 时，config_file 相对路径以该目标配置文件为基准。
+# 先核对原生角色和同名本地定义；未使用的角色不必注册。
+
+[agents.lead]
+description = "协调需要拆分、实施与集成的多个工作包，并完成整批验证和复核。"
+config_file = "agents/lead.toml"
+
+[agents.explorer]
+description = "只读调查代码、文件与证据，定位真实执行路径。"
+config_file = "agents/explorer.toml"
+
+[agents.planner]
+description = "把已确认目标整理为有边界、依赖和验收标准的可执行计划。"
+config_file = "agents/planner.toml"
+
+[agents.implementer]
+description = "实现已明确范围内的常规代码、文案或配置修改。"
+config_file = "agents/implementer.toml"
+
+[agents.complex_implementer]
+description = "实现已确定的跨模块或多文件工作包，并按约定验证。"
+config_file = "agents/complex_implementer.toml"
+
+[agents.reviewer]
+description = "对已验证的改动和证据做独立只读复核。"
+config_file = "agents/reviewer.toml"
+
+[agents.specialist]
+description = "分析疑难根因、架构约束或相互矛盾的证据。"
+config_file = "agents/specialist.toml"
+
+[agents.escalation]
+description = "整理未解决问题的证据、选项和建议，交回负责人判断。"
+config_file = "agents/escalation.toml"
+
+[agents.prompt_writer]
+description = "撰写或改进普通提示词，保持目标、约束和评估标准清楚。"
+config_file = "agents/prompt_writer.toml"
+
+[agents.impeccable_asset_producer]
+description = "按已批准的视觉方向制作可复用栅格图片素材。"
+config_file = "agents/impeccable_asset_producer.toml"

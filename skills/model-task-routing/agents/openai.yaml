@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务与模型分工"
+  short_description: "按任务复杂度、风险与总交付成本选择模型档位，明确分工和升级边界"
+  default_prompt: "使用 $model-task-routing 为当前任务建议模型、推理档位和分工，说明理由与升级条件，保留已有模型上限和执行权限。"
