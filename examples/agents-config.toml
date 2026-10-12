@@ -2,6 +2,17 @@
 # 合并到目标 config.toml 时，config_file 相对路径以该目标配置文件为基准。
 # 先核对原生角色和同名本地定义；未使用的角色不必注册。
 
+# 主对话默认：这两个字段属于 config.toml 顶层，放在任何 [section] 之前。
+# 仅在接收端账号和客户端支持示例型号/档位后逐字段合并；不自动安装或覆盖。
+model = "gpt-6-astra"
+model_reasoning_effort = "xhigh"
+
+# 通用子任务兜底；不设置权限、费用、并发上限或 provider。
+# 已有 [agents] 时只合并字段，不能重复声明该 section。
+[agents]
+default_subagent_model = "gpt-6.1-sol"
+default_subagent_reasoning_effort = "high"
+
 [agents.lead]
 description = "协调需要拆分、实施与集成的多个工作包，并完成整批验证和复核。"
 config_file = "agents/lead.toml"
